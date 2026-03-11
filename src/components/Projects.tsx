@@ -95,8 +95,8 @@ export default function Projects() {
   return (
     <section
       id="projects"
+      className="section-padding"
       style={{
-        padding: "120px clamp(24px, 8vw, 120px)",
         borderBottom: "1px solid var(--border)",
       }}
     >
@@ -109,7 +109,7 @@ export default function Projects() {
           fontSize: "clamp(32px, 4vw, 52px)",
           fontWeight: 300,
           letterSpacing: "-0.02em",
-          marginBottom: 64,
+          marginBottom: 48,
         }}
       >
         Selected Projects
@@ -127,14 +127,7 @@ export default function Projects() {
             {/* Row header */}
             <div
               onClick={() => setActiveIdx(activeIdx === i ? null : i)}
-              style={{
-                display: "grid",
-                gridTemplateColumns: "64px 1fr auto auto",
-                gap: 24,
-                alignItems: "center",
-                padding: "28px 0",
-                transition: "all 0.2s",
-              }}
+              className="project-row"
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.paddingLeft = "16px";
               }}
@@ -145,16 +138,15 @@ export default function Projects() {
               <span className="mono" style={{ fontSize: 12, color: "var(--muted)" }}>
                 {project.index}
               </span>
-              <span style={{ fontSize: "clamp(16px, 2vw, 22px)", fontWeight: 300 }}>
+              <span style={{ fontSize: "clamp(15px, 2vw, 22px)", fontWeight: 300 }}>
                 {project.title}
               </span>
               <span
+                className="project-type-col"
                 style={{
                   fontSize: 12,
                   color: "var(--text-dim)",
-                  display: "none",
                 }}
-                className="hide-sm"
               >
                 {project.type}
               </span>
@@ -174,16 +166,7 @@ export default function Projects() {
 
             {/* Expanded content */}
             {activeIdx === i && (
-              <div
-                style={{
-                  padding: "0 0 48px 0",
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: 48,
-                  borderTop: "1px solid var(--border)",
-                  paddingTop: 32,
-                }}
-              >
+              <div className="project-expand">
                 {/* Left */}
                 <div>
                   <p style={{ color: "var(--text-dim)", lineHeight: 1.8, fontWeight: 300, fontSize: 14 }}>
@@ -247,7 +230,7 @@ export default function Projects() {
       <div
         style={{
           marginTop: 48,
-          padding: "32px",
+          padding: "24px",
           border: "1px solid var(--border)",
           display: "flex",
           alignItems: "center",

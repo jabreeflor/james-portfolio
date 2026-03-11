@@ -33,8 +33,8 @@ export default function Experience() {
   return (
     <section
       id="experience"
+      className="section-padding"
       style={{
-        padding: "120px clamp(24px, 8vw, 120px)",
         borderBottom: "1px solid var(--border)",
       }}
     >
@@ -47,7 +47,7 @@ export default function Experience() {
           fontSize: "clamp(32px, 4vw, 52px)",
           fontWeight: 300,
           letterSpacing: "-0.02em",
-          marginBottom: 64,
+          marginBottom: 48,
         }}
       >
         Professional Timeline
@@ -70,14 +70,7 @@ export default function Experience() {
           {experience.map((job, i) => (
             <div
               key={i}
-              style={{
-                display: "grid",
-                gridTemplateColumns: "200px 1fr",
-                gap: 48,
-                paddingLeft: 32,
-                paddingBottom: 64,
-                position: "relative",
-              }}
+              className="timeline-grid"
             >
               {/* Dot */}
               <div
