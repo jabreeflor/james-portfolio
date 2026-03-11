@@ -43,12 +43,7 @@ export default function Contact() {
               value: "mx.sanchez.james@gmail.com",
               href: "mailto:mx.sanchez.james@gmail.com",
             },
-            {
-              label: "Phone",
-              value: "+1 (484) 925-5371",
-              href: "tel:+14849255371",
-            },
-            {
+{
               label: "Location",
               value: "Greater Philadelphia Area, PA",
               href: null,
