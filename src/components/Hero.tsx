@@ -66,27 +66,13 @@ export default function Hero() {
         }}
       />
 
-      {/* Corner label */}
-      <div
-        className="label mono"
-        style={{
-          position: "absolute",
-          top: 24,
-          left: "clamp(20px, 6vw, 120px)",
-        }}
-      >
-        Portfolio — 2025
-      </div>
+      {/* Top bar — flows on mobile, absolute on tablet+ */}
+      <div className="hero-top-bar">
+        <div className="label mono">
+          Portfolio — 2025
+        </div>
 
-      {/* Nav */}
-      <nav
-        className="hero-nav"
-        style={{
-          position: "absolute",
-          top: 20,
-          right: "clamp(20px, 6vw, 120px)",
-        }}
-      >
+        <nav className="hero-nav">
         {["About", "Experience", "Projects", "Contact"].map((item) => (
           <a
             key={item}
@@ -107,9 +93,10 @@ export default function Hero() {
             {item}
           </a>
         ))}
-      </nav>
+        </nav>
+      </div>
 
-      <div style={{ position: "relative", zIndex: 1, maxWidth: 900 }}>
+      <div className="hero-content" style={{ position: "relative", zIndex: 1, maxWidth: 900 }}>
         <p className="label" style={{ marginBottom: 20 }}>
           Architectural Designer
         </p>
@@ -118,7 +105,7 @@ export default function Hero() {
           ref={nameRef}
           onMouseEnter={triggerConfetti}
           style={{
-            fontSize: "clamp(44px, 9vw, 120px)",
+            fontSize: "clamp(36px, 9vw, 120px)",
             fontWeight: 300,
             letterSpacing: "-0.03em",
             lineHeight: 1.0,

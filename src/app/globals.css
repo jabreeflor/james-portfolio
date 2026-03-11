@@ -77,10 +77,22 @@ body {
   padding: 0 clamp(20px, 6vw, 120px);
 }
 
+.hero-top-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 20px;
+  padding-bottom: 24px;
+}
+
 .hero-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.hero-content {
+  padding-top: 0;
 }
 
 .two-col-grid {
@@ -130,6 +142,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .project-type-col {
@@ -168,8 +182,24 @@ body {
     padding: 0 clamp(24px, 8vw, 120px);
   }
 
+  .hero-top-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: clamp(24px, 8vw, 120px);
+    right: clamp(24px, 8vw, 120px);
+  }
+
   .hero-nav {
     gap: 24px;
+  }
+
+  .hero-content {
+    padding-top: 0;
   }
 
   .two-col-grid {
