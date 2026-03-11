@@ -4,8 +4,8 @@ export default function Contact() {
   return (
     <section
       id="contact"
+      className="section-padding"
       style={{
-        padding: "120px clamp(24px, 8vw, 120px)",
         borderBottom: "1px solid var(--border)",
         background: "var(--surface)",
       }}
@@ -15,14 +15,7 @@ export default function Contact() {
         06 — Contact
       </p>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 80,
-          alignItems: "start",
-        }}
-      >
+      <div className="contact-grid">
         <div>
           <h2
             style={{
@@ -68,13 +61,7 @@ export default function Contact() {
           ].map((item) => (
             <div
               key={item.label}
-              style={{
-                padding: "24px 0",
-                borderBottom: "1px solid var(--border)",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
+              className="contact-row"
             >
               <span className="label">{item.label}</span>
               {item.href ? (

@@ -43,12 +43,12 @@ export default function Hero() {
   return (
     <section
       id="home"
+      className="hero-section"
       style={{
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        padding: "0 clamp(24px, 8vw, 120px)",
         position: "relative",
         borderBottom: "1px solid var(--border)",
       }}
@@ -71,8 +71,8 @@ export default function Hero() {
         className="label mono"
         style={{
           position: "absolute",
-          top: 32,
-          left: "clamp(24px, 8vw, 120px)",
+          top: 24,
+          left: "clamp(20px, 6vw, 120px)",
         }}
       >
         Portfolio — 2025
@@ -80,12 +80,11 @@ export default function Hero() {
 
       {/* Nav */}
       <nav
+        className="hero-nav"
         style={{
           position: "absolute",
-          top: 28,
-          right: "clamp(24px, 8vw, 120px)",
-          display: "flex",
-          gap: 32,
+          top: 20,
+          right: "clamp(20px, 6vw, 120px)",
         }}
       >
         {["About", "Experience", "Projects", "Contact"].map((item) => (
@@ -119,7 +118,7 @@ export default function Hero() {
           ref={nameRef}
           onMouseEnter={triggerConfetti}
           style={{
-            fontSize: "clamp(52px, 9vw, 120px)",
+            fontSize: "clamp(44px, 9vw, 120px)",
             fontWeight: 300,
             letterSpacing: "-0.03em",
             lineHeight: 1.0,
@@ -139,21 +138,14 @@ export default function Hero() {
           Sanchez
         </h1>
 
-        <div
-          style={{
-            marginTop: 32,
-            display: "flex",
-            alignItems: "center",
-            gap: 24,
-            flexWrap: "wrap",
-          }}
-        >
+        <div className="hero-subtitle" style={{ marginTop: 24 }}>
           <span
             style={{
-              width: 64,
+              width: 48,
               height: 1,
               background: "var(--accent)",
               display: "inline-block",
+              flexShrink: 0,
             }}
           />
           <p
@@ -168,7 +160,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div style={{ marginTop: 48, display: "flex", gap: 16 }}>
+        <div className="hero-cta" style={{ marginTop: 36 }}>
           <a
             href="#projects"
             style={{
@@ -223,8 +215,8 @@ export default function Hero() {
         className="label mono"
         style={{
           position: "absolute",
-          bottom: 32,
-          right: "clamp(24px, 8vw, 120px)",
+          bottom: 24,
+          right: "clamp(20px, 6vw, 120px)",
           color: "var(--muted)",
         }}
       >

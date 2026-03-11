@@ -23,8 +23,8 @@ export default function Skills() {
   return (
     <section
       id="skills"
+      className="section-padding"
       style={{
-        padding: "120px clamp(24px, 8vw, 120px)",
         borderBottom: "1px solid var(--border)",
         background: "var(--surface)",
       }}
@@ -38,7 +38,7 @@ export default function Skills() {
           fontSize: "clamp(32px, 4vw, 52px)",
           fontWeight: 300,
           letterSpacing: "-0.02em",
-          marginBottom: 64,
+          marginBottom: 48,
         }}
       >
         Tools &amp; Expertise
@@ -47,7 +47,7 @@ export default function Skills() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
           gap: 1,
           border: "1px solid var(--border)",
         }}
@@ -56,7 +56,7 @@ export default function Skills() {
           <div
             key={group.category}
             style={{
-              padding: "36px 32px",
+              padding: "28px 24px",
               borderRight: "1px solid var(--border)",
               borderBottom: "1px solid var(--border)",
             }}

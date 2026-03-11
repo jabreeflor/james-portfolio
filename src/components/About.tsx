@@ -2,12 +2,12 @@ export default function About() {
   return (
     <section
       id="about"
+      className="section-padding"
       style={{
-        padding: "120px clamp(24px, 8vw, 120px)",
         borderBottom: "1px solid var(--border)",
       }}
     >
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }}>
+      <div className="two-col-grid">
         {/* Left */}
         <div>
           <p className="label" style={{ marginBottom: 16 }}>
